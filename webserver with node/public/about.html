@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Express Webserver | About</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Navigation Bar -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="/" class="logo">
+                🌐 Node<span class="logo-accent">Express</span>
+            </a>
+            <nav class="nav-links">
+                <a href="/">Home</a>
+                <a href="/about" class="active">About</a>
+                <a href="/contact">Contact</a>
+                <a href="/contact" class="nav-cta">Get Started</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <span class="hero-badge">Project Architecture</span>
+                <h1 class="hero-title">About the <span class="highlight-gradient">Web Server</span></h1>
+                <p class="hero-subtitle">
+                    This project demonstrates how Node.js and Express.js process HTTP GET and POST requests, 
+                    validate form payloads server-side, and implement HTTP status codes cleanly.
+                </p>
+            </div>
+        </section>
+
+        <!-- Technical Features Grid -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Core Implementation Highlights</h2>
+                <div class="cards-grid">
+                    
+                    <div class="card">
+                        <div class="card-icon">📁</div>
+                        <h3>Static File Middleware</h3>
+                        <p>Uses <code>express.static('public')</code> to serve CSS, JavaScript, and static HTML files effortlessly.</p>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-icon">⚡</div>
+                        <h3>Post / Redirect / Get</h3>
+                        <p>Handles form submission on <code>POST /contact</code>, performs validation, and uses <code>HTTP 303</code> redirect to prevent duplicate submissions.</p>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-icon">🛡️</div>
+                        <h3>Server-Side Validation</h3>
+                        <p>Validates name length (1-100), email pattern & length (max 254), and message length (1-2000) before approving requests.</p>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-icon">🚫</div>
+                        <h3>Custom 404 Middleware</h3>
+                        <p>Catches all unhandled routes using a fallback middleware that returns an HTTP status code 404 with custom markup.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Node.js + Express College Project. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

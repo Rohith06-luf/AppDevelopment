@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Express Webserver | Contact Us</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Navigation Bar -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="/" class="logo">
+                🌐 Node<span class="logo-accent">Express</span>
+            </a>
+            <nav class="nav-links">
+                <a href="/">Home</a>
+                <a href="/about">About</a>
+                <a href="/contact" class="active">Contact</a>
+                <a href="/contact" class="nav-cta">Get Started</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <span class="hero-badge">Form Submission & Validation</span>
+                <h1 class="hero-title">Send Us a <span class="highlight-gradient">Message</span></h1>
+                <p class="hero-subtitle">
+                    Fill out the form below. Submissions are processed via <code>POST /contact</code>, 
+                    validated server-side, and redirected with HTTP 303 status.
+                </p>
+            </div>
+        </section>
+
+        <!-- Contact Form Section -->
+        <section class="section">
+            <div class="container contact-container">
+                
+                <!-- Success Alert Banner (Shown via URL query param ?sent=1) -->
+                <div id="successAlert" class="alert alert-success hidden" role="alert">
+                    <span>✅ Your message has been sent successfully!</span>
+                </div>
+
+                <!-- Error Alert Banner (Shown via URL query param ?error=1) -->
+                <div id="errorAlert" class="alert alert-error hidden" role="alert">
+                    <span>❌ Invalid input. Please check your details and try again.</span>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="card">
+                    <form action="/contact" method="POST" id="contactForm">
+                        
+                        <!-- Name Field -->
+                        <div class="form-group">
+                            <label for="name">Full Name <span style="color: #ef4444;">*</span></label>
+                            <input 
+                                type="text" 
+                                id="name" 
+                                name="name" 
+                                placeholder="e.g. Rohith M" 
+                                required 
+                                maxlength="100"
+                                autocomplete="name"
+                            >
+                        </div>
+
+                        <!-- Email Field -->
+                        <div class="form-group">
+                            <label for="email">Email Address <span style="color: #ef4444;">*</span></label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                placeholder="e.g. rohith@example.com" 
+                                required 
+                                maxlength="254"
+                                autocomplete="email"
+                            >
+                        </div>
+
+                        <!-- Message Field -->
+                        <div class="form-group">
+                            <label for="message">Message <span style="color: #ef4444;">*</span></label>
+                            <textarea 
+                                id="message" 
+                                name="message" 
+                                rows="5" 
+                                placeholder="Write your message here (1 to 2000 characters)..." 
+                                required 
+                                maxlength="2000"
+                            ></textarea>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Node.js + Express College Project. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Client-side Script to handle ?sent=1 and ?error=1 URL parameters -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const successAlert = document.getElementById('successAlert');
+            const errorAlert = document.getElementById('errorAlert');
+
+            if (urlParams.get('sent') === '1') {
+                successAlert.classList.remove('hidden');
+            } else if (urlParams.get('error') === '1') {
+                errorAlert.classList.remove('hidden');
+            }
+        });
+    </script>
+
+</body>
+</html>

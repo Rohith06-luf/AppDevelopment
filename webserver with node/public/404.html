@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 Page Not Found | Express Webserver</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Navigation Bar -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="/" class="logo">
+                🌐 Node<span class="logo-accent">Express</span>
+            </a>
+            <nav class="nav-links">
+                <a href="/">Home</a>
+                <a href="/about">About</a>
+                <a href="/contact">Contact</a>
+                <a href="/" class="nav-cta">Back Home</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="error-page">
+        <div class="container">
+            <div class="error-badge">404</div>
+            <h1 class="error-title">Page Not Found</h1>
+            <p class="error-desc">
+                Oops! The URL you requested does not exist on this Express server. 
+                Our fallback middleware caught this request and returned an HTTP 404 status.
+            </p>
+            <div class="hero-buttons">
+                <a href="/" class="btn btn-primary">Return to Home Page</a>
+                <a href="/contact" class="btn btn-outline">Go to Contact Page</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Node.js + Express College Project. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

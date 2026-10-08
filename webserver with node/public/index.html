@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Express Webserver | Home</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Navigation Bar -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="/" class="logo">
+                🌐 Node<span class="logo-accent">Express</span>
+            </a>
+            <nav class="nav-links">
+                <a href="/" class="active">Home</a>
+                <a href="/about">About</a>
+                <a href="/contact">Contact</a>
+                <a href="/contact" class="nav-cta">Get Started</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <span class="hero-badge">Node.js + Express Webserver</span>
+                <h1 class="hero-title">Serving Static Pages with <span class="highlight-gradient">Express.js</span></h1>
+                <p class="hero-subtitle">
+                    A clean, lightweight web application built to serve static HTML files, handle HTTP 303 form redirects, 
+                    and render custom 404 error pages.
+                </p>
+                <div class="hero-buttons">
+                    <a href="/about" class="btn btn-primary">Learn About Architecture</a>
+                    <a href="/contact" class="btn btn-outline">Test Contact Form</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Route Cards Section -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Explore Application Routes</h2>
+                <div class="cards-grid">
+                    
+                    <!-- Route 1: Home -->
+                    <div class="card">
+                        <div class="card-icon">🏠</div>
+                        <h3>Home Route (<code>/</code>)</h3>
+                        <p>Serves the primary <code>index.html</code> landing page displaying application highlights and routing structure.</p>
+                        <a href="/" class="card-link">Visit Route &rarr;</a>
+                    </div>
+
+                    <!-- Route 2: About -->
+                    <div class="card">
+                        <div class="card-icon">📘</div>
+                        <h3>About Route (<code>/about</code>)</h3>
+                        <p>Serves <code>about.html</code> with technical details on Node.js, Express routing, and static file serving.</p>
+                        <a href="/about" class="card-link">Visit Route &rarr;</a>
+                    </div>
+
+                    <!-- Route 3: Contact -->
+                    <div class="card">
+                        <div class="card-icon">📩</div>
+                        <h3>Contact Route (<code>/contact</code>)</h3>
+                        <p>Serves <code>contact.html</code> featuring a POST form validated server-side with 303 Post/Redirect/Get pattern.</p>
+                        <a href="/contact" class="card-link">Visit Route &rarr;</a>
+                    </div>
+
+                    <!-- Route 4: Custom 404 -->
+                    <div class="card">
+                        <div class="card-icon">⚠️</div>
+                        <h3>Test 404 Error</h3>
+                        <p>Navigates to an unhandled URL to test the wildcard middleware and render the custom <code>404.html</code> page.</p>
+                        <a href="/nonexistent-page-url" class="card-link">Test 404 Page &rarr;</a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Node.js + Express College Project. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
