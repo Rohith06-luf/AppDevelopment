@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rohith M | Personal Portfolio</title>
+    <meta name="description" content="Personal portfolio of Rohith M, B.E. Artificial Intelligence & Data Science student at KPR Institute of Engineering and Technology.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ==================== NAVIGATION BAR ==================== -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="#home" class="logo">
+                Rohith<span class="logo-accent">.M</span>
+            </a>
+            
+            <!-- Mobile Menu Toggle (CSS Only) -->
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <nav class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#academics">Academics</a>
+                <a href="#projects">Projects</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact" class="nav-cta">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- ==================== HERO SECTION ==================== -->
+        <section id="home" class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <span class="badge-welcome">👋 Welcome to my Portfolio</span>
+                    <h1 class="hero-title">Hi, I'm <span class="highlight-yellow">Rohith M</span></h1>
+                    <h2 class="hero-subtitle">Artificial Intelligence & Data Science Student</h2>
+                    <p class="hero-description">
+                        Passionate about building intelligent AI models, extracting insights from complex datasets, 
+                        and designing sleek, responsive web platforms.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary">View Projects</a>
+                        <a href="#contact" class="btn btn-outline">Contact Me</a>
+                    </div>
+
+                    <!-- Social Icons Bar -->
+                    <div class="hero-socials">
+                        <a href="https://github.com/yourusername" target="_blank" aria-label="GitHub">
+                            <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                        </a>
+                        <a href="https://linkedin.com/in/rohith-murugan-668538328" target="_blank" aria-label="LinkedIn">
+                            <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        </a>
+                        <a href="mailto:rohithmurugan666@gmail.com" aria-label="Gmail">
+                            <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12.713l-11.985-9.713h23.97l-11.985 9.713zm0 2.574l-12-9.725v15.438h24v-15.438l-12 9.725z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-image-wrapper">
+                    <div class="profile-card">
+                        <!-- User's local photo -->
+                        <img src="passport photo.jpg" alt="Rohith M Photo" class="profile-img">
+                        <div class="profile-badge">
+                            <span class="status-dot"></span> Available for Projects
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== ABOUT ME ==================== -->
+        <section id="about" class="section about-section">
+            <div class="container">
+                <div class="section-title-wrapper">
+                    <h2 class="section-title">About Me</h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-text-card">
+                        <h3 class="about-heading">Passionate Innovator in AI & Data Science</h3>
+                        <p class="about-paragraph">
+                            Hello! I am <strong>Rohith M</strong>, an undergraduate student pursuing my Bachelor of Engineering (B.E.) 
+                            in <strong>Artificial Intelligence & Data Science</strong> at <strong>KPR Institute of Engineering and Technology</strong>, Coimbatore.
+                        </p>
+                        <p class="about-paragraph">
+                            My goal is to solve real-world problems by leveraging machine learning algorithms, statistical data analysis, 
+                            and modern web technologies. I enjoy building automated systems, working with datasets, and continuously 
+                            up-skilling in modern programming tools.
+                        </p>
+                    </div>
+
+                    <div class="about-highlights-grid">
+                        <div class="highlight-card">
+                            <div class="card-icon red-icon">🎓</div>
+                            <h4>Education</h4>
+                            <p>B.E. AI & DS (2024 - 2028)</p>
+                        </div>
+                        <div class="highlight-card">
+                            <div class="card-icon yellow-icon">🏛️</div>
+                            <h4>Institution</h4>
+                            <p>KPR Institute of Eng. & Tech.</p>
+                        </div>
+                        <div class="highlight-card">
+                            <div class="card-icon blue-icon">📍</div>
+                            <h4>Location</h4>
+                            <p>Coimbatore, Tamil Nadu</p>
+                        </div>
+                        <div class="highlight-card">
+                            <div class="card-icon red-icon">🎯</div>
+                            <h4>Career Interest</h4>
+                            <p>AI / ML Engineer & Data Scientist</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== ACADEMIC PROFILE ==================== -->
+        <section id="academics" class="section academics-section">
+            <div class="container">
+                <div class="section-title-wrapper">
+                    <h2 class="section-title">Academic Profile</h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <!-- Featured Current Degree Card -->
+                <div class="degree-card">
+                    <div class="degree-header">
+                        <div>
+                            <span class="degree-tag">Undergraduate Degree</span>
+                            <h3 class="degree-title">B.E. Artificial Intelligence & Data Science</h3>
+                            <p class="degree-college">KPR Institute of Engineering and Technology</p>
+                        </div>
+                        <div class="cgpa-pill">
+                            <span class="cgpa-val">8.1</span>
+                            <span class="cgpa-lbl">CGPA</span>
+                        </div>
+                    </div>
+                    <div class="degree-footer">
+                        <span>🗓️ Duration: 2024 - 2028</span>
+                        <span>📍 Coimbatore, Tamil Nadu</span>
+                    </div>
+                </div>
+
+                <!-- Educational Qualification Table -->
+                <div class="table-wrapper">
+                    <h3 class="table-heading">Academic Track Record</h3>
+                    <table class="academic-table">
+                        <thead>
+                            <tr>
+                                <th>Qualification</th>
+                                <th>Institution / Stream</th>
+                                <th>Year</th>
+                                <th>Grade / Percentage</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-label="Qualification"><strong>B.E. AI & DS (UG)</strong></td>
+                                <td data-label="Institution">KPR Institute of Engineering and Technology</td>
+                                <td data-label="Year">2024 - 2028</td>
+                                <td data-label="Grade"><span class="badge-grade grade-yellow">8.1 CGPA</span></td>
+                            </tr>
+                            <tr>
+                                <td data-label="Qualification"><strong>12th (HSC)</strong></td>
+                                <td data-label="Institution">Higher Secondary Education</td>
+                                <td data-label="Year">2024</td>
+                                <td data-label="Grade"><span class="badge-grade grade-red">88%</span></td>
+                            </tr>
+                            <tr>
+                                <td data-label="Qualification"><strong>10th (SSLC)</strong></td>
+                                <td data-label="Institution">Secondary School Certificate</td>
+                                <td data-label="Year">2022</td>
+                                <td data-label="Grade"><span class="badge-grade grade-red">95%</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Achievement Card -->
+                <div class="achievement-card">
+                    <div class="achievement-icon">🏆</div>
+                    <div class="achievement-info">
+                        <h4>Innovosense 2026 Participation</h4>
+                        <p>Actively participated in <strong>Innovosense 2026</strong>, showcasing technical innovation and creative problem-solving skills.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== PROJECTS ==================== -->
+        <section id="projects" class="section projects-section">
+            <div class="container">
+                <div class="section-title-wrapper">
+                    <h2 class="section-title">Projects</h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card">
+                        <div class="project-header">
+                            <span class="project-category">Machine Learning</span>
+                            <h3 class="project-title">AI Image Classifier</h3>
+                        </div>
+                        <p class="project-desc">
+                            A deep learning image classification model trained to categorize visual inputs accurately using neural networks and image preprocessing.
+                        </p>
+                        <div class="tech-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">PyTorch</span>
+                            <span class="tag">OpenCV</span>
+                            <span class="tag">CNN</span>
+                        </div>
+                        <div class="project-footer">
+                            <a href="https://github.com/yourusername" target="_blank" class="project-link">
+                                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                                View on GitHub
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card">
+                        <div class="project-header">
+                            <span class="project-category">Data Science</span>
+                            <h3 class="project-title">Student Performance Predictor</h3>
+                        </div>
+                        <p class="project-desc">
+                            Data analytics and machine learning pipeline that analyzes student study patterns and predicts academic performance with high precision.
+                        </p>
+                        <div class="tech-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Scikit-Learn</span>
+                            <span class="tag">Pandas</span>
+                            <span class="tag">Matplotlib</span>
+                        </div>
+                        <div class="project-footer">
+                            <a href="https://github.com/yourusername" target="_blank" class="project-link">
+                                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                                View on GitHub
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card">
+                        <div class="project-header">
+                            <span class="project-category">Web Engineering</span>
+                            <h3 class="project-title">Personal Portfolio Website</h3>
+                        </div>
+                        <p class="project-desc">
+                            A modern, fully responsive personal portfolio built strictly using pure semantic HTML5 and custom CSS3, optimized for modern browsers.
+                        </p>
+                        <div class="tech-tags">
+                            <span class="tag">HTML5</span>
+                            <span class="tag">CSS3</span>
+                            <span class="tag">Flexbox / Grid</span>
+                            <span class="tag">UI/UX</span>
+                        </div>
+                        <div class="project-footer">
+                            <a href="https://github.com/yourusername" target="_blank" class="project-link">
+                                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                                View on GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== SKILLS ==================== -->
+        <section id="skills" class="section skills-section">
+            <div class="container">
+                <div class="section-title-wrapper">
+                    <h2 class="section-title">Skills & Competencies</h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="skills-grid">
+                    <!-- Programming Languages -->
+                    <div class="skill-category-card">
+                        <div class="skill-category-header">
+                            <span class="cat-icon">💻</span>
+                            <h3>Programming Languages</h3>
+                        </div>
+                        <div class="skill-pills-list">
+                            <span class="skill-pill pill-yellow">Python</span>
+                            <span class="skill-pill pill-red">C Language</span>
+                            <span class="skill-pill pill-blue">C++</span>
+                            <span class="skill-pill pill-yellow">HTML5</span>
+                            <span class="skill-pill pill-red">CSS3</span>
+                        </div>
+                    </div>
+
+                    <!-- Tools & Frameworks -->
+                    <div class="skill-category-card">
+                        <div class="skill-category-header">
+                            <span class="cat-icon">🛠️</span>
+                            <h3>Tools & Data Science</h3>
+                        </div>
+                        <div class="skill-pills-list">
+                            <span class="skill-pill pill-blue">Git & GitHub</span>
+                            <span class="skill-pill pill-yellow">VS Code</span>
+                            <span class="skill-pill pill-red">Pandas</span>
+                            <span class="skill-pill pill-blue">NumPy</span>
+                            <span class="skill-pill pill-yellow">Jupyter Notebook</span>
+                        </div>
+                    </div>
+
+                    <!-- Core Concepts -->
+                    <div class="skill-category-card">
+                        <div class="skill-category-header">
+                            <span class="cat-icon">🧠</span>
+                            <h3>Core Domains</h3>
+                        </div>
+                        <div class="skill-pills-list">
+                            <span class="skill-pill pill-red">Artificial Intelligence</span>
+                            <span class="skill-pill pill-yellow">Machine Learning</span>
+                            <span class="skill-pill pill-blue">Data Analytics</span>
+                            <span class="skill-pill pill-red">Data Structures</span>
+                            <span class="skill-pill pill-yellow">Responsive Web Design</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== CONTACT ==================== -->
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <div class="section-title-wrapper">
+                    <h2 class="section-title">Contact & Connect</h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="contact-grid">
+                    <!-- Contact Cards -->
+                    <div class="contact-info-wrapper">
+                        <h3>Let's Get in Touch!</h3>
+                        <p class="contact-intro">
+                            Feel free to reach out to me for academic collaborations, AI projects, or career opportunities.
+                        </p>
+
+                        <div class="contact-cards">
+                            <a href="mailto:rohithmurugan666@gmail.com" class="contact-item-card">
+                                <div class="contact-icon red-bg">✉️</div>
+                                <div>
+                                    <span class="contact-label">Email Me</span>
+                                    <span class="contact-value">rohithmurugan666@gmail.com</span>
+                                </div>
+                            </a>
+
+                            <a href="tel:+919025589957" class="contact-item-card">
+                                <div class="contact-icon yellow-bg">📞</div>
+                                <div>
+                                    <span class="contact-label">Call Me</span>
+                                    <span class="contact-value">+91 9025589957</span>
+                                </div>
+                            </a>
+
+                            <div class="contact-item-card">
+                                <div class="contact-icon blue-bg">📍</div>
+                                <div>
+                                    <span class="contact-label">Location</span>
+                                    <span class="contact-value">Coimbatore, Tamil Nadu, India</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Social Media Links -->
+                        <div class="social-links-block">
+                            <h4>Social Media Profiles</h4>
+                            <div class="social-pills">
+                                <a href="https://linkedin.com/in/rohith-murugan-668538328" target="_blank" class="social-btn linkedin-btn">
+                                    LinkedIn
+                                </a>
+                                <a href="https://github.com/yourusername" target="_blank" class="social-btn github-btn">
+                                    GitHub
+                                </a>
+                                <a href="https://instagram.com/yourusername" target="_blank" class="social-btn insta-btn">
+                                    Instagram
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="contact-form-card">
+                        <h3>Send a Message</h3>
+                        <form action="#" method="POST" class="contact-form" onclick="return false;">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Your Email</label>
+                                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" placeholder="Project inquiry / Feedback" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="#home" class="logo">Rohith<span class="logo-accent">.M</span></a>
+                <p>B.E. Artificial Intelligence & Data Science Student | KPRIET</p>
+            </div>
+            
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#academics">Academics</a>
+                <a href="#projects">Projects</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact">Contact</a>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Rohith M. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
