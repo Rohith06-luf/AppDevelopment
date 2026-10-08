@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration | Client-Side Validation</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="registration-wrapper">
+        <div class="card registration-card">
+            
+            <!-- Header Section -->
+            <div class="card-header">
+                <div class="header-badge">Student Project</div>
+                <h1 class="card-title">User Registration</h1>
+                <p class="card-subtitle">Fill in the required information to create your account.</p>
+            </div>
+
+            <!-- Success Notification Banner -->
+            <div id="successBanner" class="success-banner hidden" role="alert">
+                <div class="success-icon">🎉</div>
+                <div class="success-content">
+                    <h4>Registration Successful!</h4>
+                    <p>All fields have been validated successfully. Welcome aboard!</p>
+                </div>
+            </div>
+
+            <!-- Registration Form -->
+            <form id="registrationForm" novalidate>
+                
+                <!-- Section 1: Personal Details -->
+                <div class="form-section-title">
+                    <span class="section-number">1</span> Personal Information
+                </div>
+
+                <div class="form-grid">
+                    <!-- Full Name -->
+                    <div class="form-group col-full">
+                        <label for="fullname">Full Name <span class="required">*</span></label>
+                        <input type="text" id="fullname" name="fullname" placeholder="e.g. Rohith Murugan" autocomplete="name">
+                        <span class="error-msg" id="fullnameError"></span>
+                    </div>
+
+                    <!-- Email ID -->
+                    <div class="form-group">
+                        <label for="email">Email Address <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" placeholder="e.g. rohith@example.com" autocomplete="email">
+                        <span class="error-msg" id="emailError"></span>
+                    </div>
+
+                    <!-- Phone Number -->
+                    <div class="form-group">
+                        <label for="phone">Phone Number <span class="required">*</span></label>
+                        <input type="tel" id="phone" name="phone" placeholder="10-digit mobile number" maxlength="10" autocomplete="tel">
+                        <span class="error-msg" id="phoneError"></span>
+                    </div>
+
+                    <!-- Date of Birth -->
+                    <div class="form-group">
+                        <label for="dob">Date of Birth <span class="required">*</span></label>
+                        <input type="date" id="dob" name="dob">
+                        <span class="error-msg" id="dobError"></span>
+                    </div>
+
+                    <!-- Gender -->
+                    <div class="form-group">
+                        <label for="gender">Gender <span class="required">*</span></label>
+                        <select id="gender" name="gender">
+                            <option value="">-- Select Gender --</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <span class="error-msg" id="genderError"></span>
+                    </div>
+                </div>
+
+                <!-- Section 2: Account Security -->
+                <div class="form-section-title">
+                    <span class="section-number">2</span> Account Security
+                </div>
+
+                <div class="form-grid">
+                    <!-- Password -->
+                    <div class="form-group">
+                        <label for="password">Password <span class="required">*</span></label>
+                        <input type="password" id="password" name="password" placeholder="Min. 8 chars (A-z, 0-9)">
+                        <span class="error-msg" id="passwordError"></span>
+                    </div>
+
+                    <!-- Confirm Password -->
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm Password <span class="required">*</span></label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Re-enter your password">
+                        <span class="error-msg" id="confirmPasswordError"></span>
+                    </div>
+                </div>
+
+                <!-- Section 3: Address & Location -->
+                <div class="form-section-title">
+                    <span class="section-number">3</span> Address Details
+                </div>
+
+                <div class="form-grid">
+                    <!-- Address -->
+                    <div class="form-group col-full">
+                        <label for="address">Street Address <span class="required">*</span></label>
+                        <textarea id="address" name="address" rows="2" placeholder="Enter your full street address"></textarea>
+                        <span class="error-msg" id="addressError"></span>
+                    </div>
+
+                    <!-- City -->
+                    <div class="form-group">
+                        <label for="city">City <span class="required">*</span></label>
+                        <input type="text" id="city" name="city" placeholder="e.g. Coimbatore">
+                        <span class="error-msg" id="cityError"></span>
+                    </div>
+
+                    <!-- State -->
+                    <div class="form-group">
+                        <label for="state">State <span class="required">*</span></label>
+                        <input type="text" id="state" name="state" placeholder="e.g. Tamil Nadu">
+                        <span class="error-msg" id="stateError"></span>
+                    </div>
+
+                    <!-- PIN Code -->
+                    <div class="form-group col-full">
+                        <label for="pincode">PIN Code <span class="required">*</span></label>
+                        <input type="text" id="pincode" name="pincode" placeholder="6-digit postal code" maxlength="6">
+                        <span class="error-msg" id="pincodeError"></span>
+                    </div>
+                </div>
+
+                <!-- Section 4: Terms & Conditions -->
+                <div class="form-group checkbox-group">
+                    <label class="checkbox-label" for="terms">
+                        <input type="checkbox" id="terms" name="terms">
+                        <span>I agree to the <a href="#" class="link-terms">Terms & Conditions</a> and privacy policy. <span class="required">*</span></span>
+                    </label>
+                    <span class="error-msg" id="termsError"></span>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-submit">Submit Registration</button>
+                    <button type="reset" class="btn btn-reset">Reset Form</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
+</body>
+</html>
