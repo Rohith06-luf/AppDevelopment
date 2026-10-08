@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager | To-Do List App</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-container">
+        
+        <!-- App Header -->
+        <header class="app-header">
+            <div class="header-logo">
+                <span class="logo-icon">⚡</span>
+                <h1>Task Manager</h1>
+            </div>
+            <p class="header-subtitle">Stay organized and accomplish your goals every day.</p>
+        </header>
+
+        <!-- Main Card -->
+        <main class="card main-card">
+            
+            <!-- Task Input Section -->
+            <form id="taskForm" class="task-input-form" onsubmit="return false;">
+                <div class="input-wrapper">
+                    <input 
+                        type="text" 
+                        id="taskInput" 
+                        placeholder="What do you need to do today?" 
+                        autocomplete="off"
+                    >
+                    <button type="submit" id="addTaskBtn" class="btn btn-add">
+                        <span class="btn-icon">+</span> Add Task
+                    </button>
+                </div>
+                <span id="inputError" class="input-error-msg"></span>
+            </form>
+
+            <!-- Task Counter & Stats Bar -->
+            <div class="stats-bar">
+                <div class="stat-badge">
+                    <span class="stat-label">Total:</span>
+                    <span id="totalCount" class="stat-val">0</span>
+                </div>
+                <div class="stat-badge stat-pending">
+                    <span class="stat-label">Pending:</span>
+                    <span id="pendingCount" class="stat-val">0</span>
+                </div>
+                <div class="stat-badge stat-completed">
+                    <span class="stat-label">Completed:</span>
+                    <span id="completedCount" class="stat-val">0</span>
+                </div>
+            </div>
+
+            <!-- Filter Tabs -->
+            <div class="filter-tabs">
+                <button class="filter-btn active" data-filter="all">All Tasks</button>
+                <button class="filter-btn" data-filter="active">Active</button>
+                <button class="filter-btn" data-filter="completed">Completed</button>
+            </div>
+
+            <!-- Task List Container -->
+            <ul id="taskList" class="task-list"></ul>
+
+            <!-- Empty State Message -->
+            <div id="emptyState" class="empty-state">
+                <div class="empty-icon">📝</div>
+                <h3>No tasks found</h3>
+                <p>Add a new task above to start organizing your day!</p>
+            </div>
+
+            <!-- Footer Clear Actions -->
+            <div class="card-footer">
+                <span id="footerSummary" class="footer-summary">0 tasks remaining</span>
+                <button id="clearCompletedBtn" class="btn-text-danger">Clear Completed</button>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
+</body>
+</html>
